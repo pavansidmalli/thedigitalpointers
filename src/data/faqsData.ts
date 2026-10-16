@@ -5,7 +5,7 @@ export const faqsData: FAQItem[] = [
   {
     id: 'gen-1',
     category: 'General Digital Marketing',
-    question: 'What makes Digital Pointer different from typical digital marketing agencies?',
+    question: 'What makes The Digital Pointers different from typical digital marketing agencies?',
     answer: 'We focus on clear strategy before execution, transparent data reporting, and measurable commercial enquiries rather than vanity metrics. We do not lock clients into deceptive contracts, fabricate results, or rely on slow generic templates. Every campaign and website is built with clean architecture and intentional business objectives.'
   },
   {

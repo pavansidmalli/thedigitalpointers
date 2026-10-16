@@ -4,8 +4,14 @@ export interface ServiceItem {
   shortDescription: string;
   tagline: string;
   category: 'Development' | 'Search' | 'Advertising' | 'Social';
+  image?: string;
+  imageAlt?: string;
   heroHeadline: string;
   heroSubheadline: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  mainKeyword?: string;
+  keywords?: string[];
   problemsSolved: {
     problem: string;
     impact: string;
@@ -92,8 +98,35 @@ export interface CaseStudyItem {
   title: string;
   clientType: string;
   industry: string;
+  category: 'All' | 'SEO & Organic' | 'Paid Ads & Performance' | 'Web & Conversion' | 'Local Growth';
   services: string[];
   summary: string;
+  timeline: string;
+  location: string;
+  image?: string;
+  imageAlt?: string;
+  before: {
+    state: string;
+    metrics: { label: string; value: string }[];
+    painPoints: string[];
+  };
+  after: {
+    state: string;
+    metrics: { label: string; value: string }[];
+    wins: string[];
+  };
+  keyMetricComparison: {
+    metric: string;
+    before: string;
+    after: string;
+    improvement: string;
+  }[];
+  strategyHighlights: string[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    role: string;
+  };
   results: {
     label: string;
     value: string;

@@ -23,18 +23,21 @@ import {
   ArrowRight,
   ExternalLink,
   ChevronRight,
-  SlidersHorizontal
+  SlidersHorizontal,
+  Plus,
+  BookOpen
 } from 'lucide-react';
 import { LeadSubmission } from '../types';
 
 interface AdminPageProps {
   onNavigate: (path: string) => void;
+  onOpenCMS?: () => void;
 }
 
 const STORAGE_KEY = 'dp_owner_admin_token';
 const OWNER_EMAIL = 'pavansid749@gmail.com';
 
-export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
+export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate, onOpenCMS }) => {
   // Authentication State
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [authToken, setAuthToken] = useState<string>('');
@@ -271,7 +274,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `digital_pointer_leads_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `the_digital_pointers_leads_${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -317,6 +320,15 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
 
             {isAuthenticated && (
               <>
+                {onOpenCMS && (
+                  <button
+                    onClick={onOpenCMS}
+                    className="px-3.5 py-2 text-xs font-semibold text-white bg-[#F06432] hover:bg-[#d95526] rounded-lg transition-colors flex items-center gap-1.5 shadow-xs"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Launch Blog CMS</span>
+                  </button>
+                )}
                 <button
                   onClick={() => setIsChangingPass(true)}
                   className="px-3.5 py-2 text-xs font-medium text-[#111111] dark:text-neutral-200 bg-[#F7F7F5] dark:bg-[#1E1E24] hover:bg-[#E8E8E8] dark:hover:bg-[#282830] rounded-lg border border-[#E8E8E8] dark:border-[#2C2C32] transition-colors flex items-center gap-1.5"
@@ -433,6 +445,35 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
         ) : (
           /* Authenticated: Leads & Marketing Funnel Dashboard */
           <div className="space-y-6">
+
+            {/* Admin CMS & Editorial Trigger Card */}
+            {onOpenCMS && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#F06432]/10 via-[#F7F7F5] dark:via-[#19191E] to-transparent border border-[#F06432]/25 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-[#F06432] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <BookOpen className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-[#111111] dark:text-white flex items-center gap-2">
+                      <span>Agency Editorial & Blog Publishing CMS</span>
+                      <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20 font-semibold">
+                        Admin Only
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#707070] dark:text-neutral-400 mt-0.5">
+                      Only authorized admins can publish new strategic insights and field guides to the live website.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={onOpenCMS}
+                  className="px-4 py-2.5 text-xs font-semibold text-white bg-[#111111] dark:bg-white text-white dark:text-[#111111] hover:bg-[#F06432] dark:hover:bg-[#F06432] dark:hover:text-white rounded-xl transition-colors flex items-center justify-center gap-2 shrink-0 shadow-xs cursor-pointer"
+                >
+                  <Plus className="w-4 h-4" />
+                  <span>Launch CMS / Publish Blog</span>
+                </button>
+              </div>
+            )}
 
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
@@ -706,7 +747,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
 
                       <div className="pt-2 flex items-center gap-2">
                         <a
-                          href={`mailto:${selectedLead.email}?subject=RE: Your inquiry with Digital Pointer (${selectedLead.service})`}
+                          href={`mailto:${selectedLead.email}?subject=RE: Your inquiry with The Digital Pointers (${selectedLead.service})`}
                           className="flex-1 py-2 px-3 rounded-xl bg-[#F06432] hover:bg-[#d95526] text-white font-semibold text-xs text-center transition-colors flex items-center justify-center gap-1.5"
                         >
                           <Mail className="w-3.5 h-3.5" />

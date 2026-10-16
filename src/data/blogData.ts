@@ -9,7 +9,7 @@ export const initialBlogPosts: BlogPost[] = [
     publishedDate: 'October 8, 2026',
     readTime: '6 min read',
     author: {
-      name: 'Digital Pointer Strategy Team',
+      name: 'The Digital Pointers Strategy Team',
       role: 'Local Search Specialists'
     },
     excerpt: 'Discover how proximity signals, Google Business Profile accuracy, and localized keyword architecture work together to bring nearby customers directly to your doorstep.',
@@ -65,7 +65,7 @@ export const initialBlogPosts: BlogPost[] = [
     publishedDate: 'September 28, 2026',
     readTime: '7 min read',
     author: {
-      name: 'Digital Pointer Strategy Team',
+      name: 'The Digital Pointers Strategy Team',
       role: 'Growth & Performance Directors'
     },
     excerpt: 'A pragmatic, data-driven comparison of organic search and paid advertising to help you allocate marketing budgets effectively and avoid costly missteps.',
@@ -100,7 +100,7 @@ export const initialBlogPosts: BlogPost[] = [
         {
           heading: 'The Hybrid Strategy: The Proven Agency Playbook',
           body: [
-            'At Digital Pointer, we routinely recommend a synchronized hybrid approach for growth-minded businesses. In months 1 through 3, Google Ads captures immediate customer demand and tests commercial keyword conversion rates. Simultaneously, our engineering and content teams construct the technical SEO architecture, optimize priority service pages, and publish in-depth topical guides.',
+            'At The Digital Pointers, we routinely recommend a synchronized hybrid approach for growth-minded businesses. In months 1 through 3, Google Ads captures immediate customer demand and tests commercial keyword conversion rates. Simultaneously, our engineering and content teams construct the technical SEO architecture, optimize priority service pages, and publish in-depth topical guides.',
             'By month 6, as organic pages begin ranking for the terms validated by your paid campaigns, you can gradually reduce paid bids on expensive generic terms and redirect ad budget toward hyper-specific high-ticket niches or remarketing.'
           ]
         }
@@ -116,7 +116,7 @@ export const initialBlogPosts: BlogPost[] = [
     publishedDate: 'September 14, 2026',
     readTime: '5 min read',
     author: {
-      name: 'Digital Pointer Strategy Team',
+      name: 'The Digital Pointers Strategy Team',
       role: 'UI/UX & Conversion Specialists'
     },
     excerpt: 'Unpack the core design principles, typographic clarity, friction reduction, and speed benchmarks that turn passive web visitors into high-value customer enquiries.',

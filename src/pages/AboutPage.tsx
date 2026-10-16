@@ -56,13 +56,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       {/* Hero Section */}
       <section className="space-y-6 max-w-4xl">
         <div className="text-xs font-mono font-semibold tracking-wider text-[#F06432] uppercase">
-          About Digital Pointer
+          About The Digital Pointers
         </div>
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#111111] dark:text-white tracking-tight leading-[1.1] text-balance">
           We Help Businesses Find Their Direction in Digital.
         </h1>
         <p className="text-lg sm:text-xl text-[#707070] dark:text-[#A1A1AA] leading-relaxed max-w-3xl">
-          Digital Pointer was founded to solve a common dilemma: businesses spend substantial capital on digital agencies but receive little strategic clarity and fewer verified commercial enquiries. We bridge that gap with rigorous strategy, clean engineering, and honest communication.
+          The Digital Pointers was founded to solve a common dilemma: businesses spend substantial capital on digital agencies but receive little strategic clarity and fewer verified commercial enquiries. We bridge that gap with rigorous strategy, clean engineering, and honest communication.
         </p>
       </section>
 
@@ -82,7 +82,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             The digital marketing landscape has become increasingly noisy. Too many businesses are sold one-size-fits-all retainer packages, fragile website templates, and automated ad campaigns that burn daily budgets without delivering tangible enquiries.
           </p>
           <p>
-            We named our agency <strong className="text-[#111111] dark:text-white font-semibold">Digital Pointer</strong> because our central objective is clear: pointing our clients toward what genuinely moves the needle. Whether that means re-architecting your website for speed, dominating the Google Local Pack in your city, or restructuring paid ads to reduce your cost per lead, every action is guided by purpose.
+            We named our agency <strong className="text-[#111111] dark:text-white font-semibold">The Digital Pointers</strong> because our central objective is clear: pointing our clients toward what genuinely moves the needle. Whether that means re-architecting your website for speed, dominating the Google Local Pack in your city, or restructuring paid ads to reduce your cost per lead, every action is guided by purpose.
           </p>
           <p>
             We operate without pretense. We do not invent inflated claims, fabricate client case studies, or lock clients into opaque long-term contracts. We partner with businesses across India and around the globe who value craft, precision, and reliable execution.

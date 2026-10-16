@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { BlogCard } from '../components/BlogCard';
 import { BlogPost } from '../types';
-import { Search, Plus, Sparkles, BookOpen, ArrowRight } from 'lucide-react';
+import { Search, BookOpen, ArrowRight } from 'lucide-react';
 
 interface BlogPageProps {
   articles: BlogPost[];
   onNavigate: (path: string) => void;
-  onOpenCMS: () => void;
 }
 
-export const BlogPage: React.FC<BlogPageProps> = ({ articles, onNavigate, onOpenCMS }) => {
+export const BlogPage: React.FC<BlogPageProps> = ({ articles, onNavigate }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -45,15 +44,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ articles, onNavigate, onOpen
           </p>
         </div>
 
-        {/* Custom CMS Button */}
-        <div className="shrink-0">
-          <button
-            onClick={onOpenCMS}
-            className="px-4 py-2.5 rounded-lg text-xs font-semibold text-white bg-[#111111] dark:bg-[#1E1E24] hover:bg-neutral-800 dark:hover:bg-[#2A2A32] border border-transparent dark:border-[#2E2E36] transition-colors flex items-center gap-2 shadow-xs"
-          >
-            <Plus className="w-4 h-4 text-[#F06432]" />
-            <span>Launch Blog CMS</span>
-          </button>
+        {/* Verified Publications Badge */}
+        <div className="shrink-0 flex items-center gap-2 text-xs font-mono text-[#707070] dark:text-[#A1A1AA] bg-[#F7F7F5] dark:bg-[#1A1A1E] px-3.5 py-2.5 rounded-lg border border-[#E8E8E8] dark:border-[#28282E]">
+          <BookOpen className="w-4 h-4 text-[#F06432]" />
+          <span>{articles.length} Verified Field Guides</span>
         </div>
       </section>
 

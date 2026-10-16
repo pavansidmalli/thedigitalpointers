@@ -7,8 +7,23 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'High-performing, responsive websites engineered with clean code, fast load times, and conversion-focused architectures.',
     tagline: 'Engineered for Performance & Enquiries',
     category: 'Development',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Modern high-converting website design and responsive code development',
     heroHeadline: 'High-Performing Websites Engineered to Convert Visitors Into Clients',
     heroSubheadline: 'We build fast, responsive, and search-optimized websites that represent your brand with editorial elegance and drive qualified enquiries.',
+    metaTitle: 'Website Design & Development Hyderabad | The Digital Pointers',
+    metaDescription: 'Custom, responsive website design & development in Hyderabad. Engineered with clean code, sub-second load speeds, mobile responsiveness, and CRO to drive client enquiries.',
+    mainKeyword: 'website design and development services hyderabad',
+    keywords: [
+      'website design and development services hyderabad',
+      'custom web design company hyderabad',
+      'responsive website development',
+      'b2b website design agency',
+      'conversion rate optimization hyderabad',
+      'fast loading websites india',
+      'corporate website development',
+      'core web vitals optimization'
+    ],
     problemsSolved: [
       {
         problem: 'Slow Page Load Times',
@@ -105,8 +120,23 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Organic search strategies based on technical health, keyword search intent, on-page architecture, and quality content.',
     tagline: 'Sustainable Search Visibility & Organic Enquiries',
     category: 'Search',
+    image: 'https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Search engine optimization analytics and organic ranking growth dashboard',
     heroHeadline: 'Attract High-Intent Organic Traffic That Converts Into Real Business',
     heroSubheadline: 'We optimize your website architecture, content depth, and technical signals to earn sustainable, qualified search rankings on Google.',
+    metaTitle: 'SEO Services & Search Engine Optimization Hyderabad | The Digital Pointers',
+    metaDescription: 'Rank #1 on Google with data-driven SEO services in Hyderabad. Technical site audits, commercial keyword research, authoritative backlinks, and organic growth.',
+    mainKeyword: 'seo services hyderabad',
+    keywords: [
+      'seo services hyderabad',
+      'search engine optimization company hyderabad',
+      'technical seo agency hyderabad',
+      'organic search rankings google',
+      'local and international seo',
+      'b2b seo consultants',
+      'google search visibility',
+      'keyword ranking strategy'
+    ],
     problemsSolved: [
       {
         problem: 'Invisible for Commercial Searches',
@@ -203,8 +233,23 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Targeted visibility for location-specific searches, Google Maps ranking signals, local citations, and nearby customer acquisition.',
     tagline: 'Win Nearby Customers Searching in Your City',
     category: 'Search',
+    image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Local SEO geo-targeting and smartphone neighborhood map navigation',
     heroHeadline: 'Capture High-Intent Nearby Customers Searching for Your Local Services',
     heroSubheadline: 'We optimize your local search signals so your business stands out when customers nearby search for solutions in your city or region.',
+    metaTitle: 'Local SEO Services & Google Maps Ranking Hyderabad | The Digital Pointers',
+    metaDescription: 'Dominate local search and Google Maps 3-pack in Hyderabad. Proven geo-targeted citations, local landing pages, review acceleration, and near-me visibility.',
+    mainKeyword: 'local seo services hyderabad',
+    keywords: [
+      'local seo services hyderabad',
+      'google maps ranking service',
+      'local 3 pack optimization',
+      'near me search optimization hyderabad',
+      'hyderabad local business marketing',
+      'local directory citations',
+      'geo targeted seo services',
+      'local customer acquisition'
+    ],
     problemsSolved: [
       {
         problem: 'Lost Nearby Footfall and Calls',
@@ -218,7 +263,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         problem: 'Weak City-Specific Content',
-        impact: 'Website ranks only broadly and fails to trigger location-modifier searches like "in Bangalore" or "near me".',
+        impact: 'Website ranks only broadly and fails to trigger location-modifier searches like "in Hyderabad" or "near me".',
         solution: 'Legitimate location-specific landing pages with authentic service descriptions and localized schema.'
       },
       {
@@ -279,7 +324,7 @@ export const servicesData: ServiceItem[] = [
     faqs: [
       {
         question: 'What is the difference between general SEO and Local SEO?',
-        answer: 'General SEO focuses on broad national or global organic rankings for informational and commercial terms. Local SEO specifically targets proximity-based queries (such as "digital marketing agency in Bangalore" or "pediatrician near me"), focusing on map listings, localized landing pages, and regional citations.'
+        answer: 'General SEO focuses on broad national or global organic rankings for informational and commercial terms. Local SEO specifically targets proximity-based queries (such as "digital marketing agency in Hyderabad" or "pediatrician near me"), focusing on map listings, localized landing pages, and regional citations.'
       },
       {
         question: 'Do we need a physical office in every city we want to rank for?',
@@ -301,8 +346,23 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Profile optimization, category alignment, services listing, updates, review management, and performance analytics.',
     tagline: 'Maximize Your Business Presence on Google Search & Maps',
     category: 'Search',
+    image: 'https://images.unsplash.com/photo-1556742049-0a67e557224f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Google Business Profile 5-star customer ratings and verified listing',
     heroHeadline: 'Turn Google Search & Maps Searches Into Direct Phone Calls and Bookings',
     heroSubheadline: 'We optimize and actively manage your Google Business Profile to keep information accurate, highlight your services, and attract local clients.',
+    metaTitle: 'Google Business Profile Management Hyderabad | The Digital Pointers',
+    metaDescription: 'Complete optimization of your Google Business Profile (GMB) in Hyderabad. Boost map calls, direction requests, photo updates, and verified 5-star customer reviews.',
+    mainKeyword: 'google business profile management hyderabad',
+    keywords: [
+      'google business profile management hyderabad',
+      'gmb optimization services hyderabad',
+      'google my business agency hyderabad',
+      'google map profile ranking',
+      'local citation audit',
+      'google review management',
+      'google maps listing optimization',
+      'local footfall marketing'
+    ],
     problemsSolved: [
       {
         problem: 'Incomplete or Misconfigured Profiles',
@@ -399,8 +459,22 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Strategic social content, brand storytelling, visual design, short-form video strategies, and community engagement.',
     tagline: 'Build Authority & Engage Your Audience Across Key Channels',
     category: 'Social',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Engaging social media marketing creative campaigns and content scheduling',
     heroHeadline: 'Build Meaningful Brand Presence and Engage Your Audience Where They Spend Time',
     heroSubheadline: 'We craft editorial content strategies, designed visual carousels, and engaging video concepts that establish your authority and generate organic enquiries.',
+    metaTitle: 'Social Media Marketing Agency Hyderabad | The Digital Pointers',
+    metaDescription: 'Build brand authority and client trust across LinkedIn, Instagram, and Meta. High-impact visual carousels, B2B thought leadership, and organic community growth.',
+    mainKeyword: 'social media marketing services hyderabad',
+    keywords: [
+      'social media marketing services hyderabad',
+      'social media management company',
+      'b2b linkedin marketing agency',
+      'instagram marketing hyderabad',
+      'creative content marketing agency',
+      'brand storytelling agency',
+      'social media advertising strategy'
+    ],
     problemsSolved: [
       {
         problem: 'Inconsistent Posting & Lack of Direction',
@@ -497,8 +571,22 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Comprehensive paid search, display, and social media campaign architectures engineered for maximum return on ad spend (ROAS).',
     tagline: 'Strategic Paid Media Engineered for Measurable ROI',
     category: 'Advertising',
+    image: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Pay-per-click digital advertising budget optimization and validated ROAS charts',
     heroHeadline: 'Turn Advertising Spend Into Scalable, Predictable Revenue',
     heroSubheadline: 'We plan, build, and optimize multi-channel PPC campaigns with rigorous conversion tracking, negative keyword hygiene, and high-converting landing pages.',
+    metaTitle: 'PPC Advertising Services & Pay-Per-Click Agency | The Digital Pointers',
+    metaDescription: 'Maximize ad ROI with data-driven PPC advertising in Hyderabad. Rigorous negative keyword hygiene, conversion tracking, multi-channel ad spend, and low CAC.',
+    mainKeyword: 'ppc advertising services hyderabad',
+    keywords: [
+      'ppc advertising services hyderabad',
+      'pay per click management company',
+      'roas optimization agency',
+      'paid media advertising hyderabad',
+      'conversion tracking setup',
+      'b2b ppc management',
+      'cost per lead reduction'
+    ],
     problemsSolved: [
       {
         problem: 'Wasted Budget on Low-Intent Clicks',
@@ -595,8 +683,22 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'High-intent Search, Performance Max, Display, and Remarketing campaigns built to capture active commercial searches.',
     tagline: 'Capture Active Buyers at the Exact Moment They Search',
     category: 'Advertising',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Google Ads search campaign targeting and high-intent commercial conversion clicks',
     heroHeadline: 'Connect With High-Intent Customers at the Exact Moment They Need Your Services',
     heroSubheadline: 'We architect and optimize targeted Google Ads campaigns with laser-focused search themes, negative keyword precision, and conversion-optimized landing pages.',
+    metaTitle: 'Google Ads Management Agency Hyderabad | The Digital Pointers',
+    metaDescription: 'Capture high-intent buyers with certified Google Ads management in Hyderabad. Laser-focused Search, Performance Max, Display, and Call-Only conversion campaigns.',
+    mainKeyword: 'google ads agency hyderabad',
+    keywords: [
+      'google ads agency hyderabad',
+      'google adwords management company hyderabad',
+      'certified google ads partner',
+      'performance max campaigns hyderabad',
+      'high intent search ads',
+      'ppc lead generation agency',
+      'google remarketing ads'
+    ],
     problemsSolved: [
       {
         problem: 'Paying for Broad, Irrelevant Searches',
@@ -693,8 +795,22 @@ export const servicesData: ServiceItem[] = [
     shortDescription: 'Targeted Facebook & Instagram advertising campaigns focused on audience segmentation, creative testing, and lead generation.',
     tagline: 'High-Converting Facebook & Instagram Ad Campaigns',
     category: 'Advertising',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Meta Instagram and Facebook advertising audience targeting and high-return creative testing',
     heroHeadline: 'Scale Customer Acquisition on Facebook and Instagram With High-Performing Creatives',
     heroSubheadline: 'We design scroll-stopping visual creatives and data-driven audience campaigns that generate qualified enquiries and sales for your business.',
+    metaTitle: 'Meta Ads Agency (Facebook & Instagram) Hyderabad | The Digital Pointers',
+    metaDescription: 'Scale revenue with high-converting Meta Ads in Hyderabad. Direct-response creative testing, custom audience funnels, and server-side Conversions API (CAPI).',
+    mainKeyword: 'meta ads agency hyderabad',
+    keywords: [
+      'meta ads agency hyderabad',
+      'facebook advertising company hyderabad',
+      'instagram ads agency hyderabad',
+      'meta conversions api setup',
+      'social lead generation campaigns',
+      'direct response ads',
+      'paid social scaling agency'
+    ],
     problemsSolved: [
       {
         problem: 'Creative Fatigue & Rising Acquisition Costs',
@@ -782,6 +898,118 @@ export const servicesData: ServiceItem[] = [
       {
         question: 'Can we connect Meta Ads directly to WhatsApp?',
         answer: 'Yes. Click-to-WhatsApp ads allow interested users to start a direct WhatsApp conversation with your sales team with a single tap, which is extremely effective for high-touch Indian and international customer relationships.'
+      }
+    ]
+  },
+  {
+    slug: 'performance-marketing',
+    title: 'Performance Marketing',
+    shortDescription: 'Data-driven, full-funnel acquisition architectures combining paid search, social media, conversion optimization, and unit economics modeling to scale revenue profitably.',
+    tagline: 'Full-Funnel Acquisition Engineered for Scalable Unit Economics',
+    category: 'Advertising',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Performance marketing multichannel attribution analytics and unit economics growth dashboard',
+    heroHeadline: 'Scale Profitable Customer Acquisition With Disciplined Full-Funnel Performance Marketing',
+    heroSubheadline: 'We architect synchronized paid acquisition ecosystems across Google, Meta, and programmatic channels—optimizing CAC, ROAS, and customer lifetime value with relentless data rigor.',
+    metaTitle: 'Performance Marketing Agency Hyderabad | The Digital Pointers',
+    metaDescription: 'Full-funnel performance marketing in Hyderabad engineered for verified ROAS. Multi-channel attribution, first-party tracking, landing page CRO, and low CAC.',
+    mainKeyword: 'performance marketing agency hyderabad',
+    keywords: [
+      'performance marketing agency hyderabad',
+      'full funnel marketing company',
+      'omnichannel customer acquisition',
+      'cac optimization hyderabad',
+      'conversion rate optimization agency',
+      'growth marketing consultancy hyderabad',
+      'ecommerce performance marketing'
+    ],
+    problemsSolved: [
+      {
+        problem: 'Siloed Channels & Double Attribution',
+        impact: 'Google and Meta both claim credit for the same conversion, misleading you on true marketing efficiency.',
+        solution: 'Server-side first-party attribution modeling and blended MER (Marketing Efficiency Ratio) tracking.'
+      },
+      {
+        problem: 'Rising Customer Acquisition Costs (CAC)',
+        impact: 'Ad spend increases month-over-month while qualified leads plateau, compressing profit margins.',
+        solution: 'Continuous creative angle testing, post-click landing page experiments, and high-intent audience exclusions.'
+      },
+      {
+        problem: 'Vanity Metrics Obscuring Unit Economics',
+        impact: 'Agencies report high impressions and low CTR costs that fail to generate actual gross margin or enterprise revenue.',
+        solution: 'Reporting anchored strictly to downstream business revenue, payback periods, and blended cost-per-qualified-lead.'
+      },
+      {
+        problem: 'Ad Fatigue & Fragile Funnels',
+        impact: 'Winning campaigns suddenly deteriorate within weeks when audiences exhaust creative formats.',
+        solution: 'Predictive creative sprints producing new native video hooks, static carousels, and value propositions before decay occurs.'
+      }
+    ],
+    deliverables: [
+      {
+        title: 'Omnichannel Full-Funnel Architecture',
+        description: 'Synchronized top-of-funnel demand generation with middle-funnel nurturing and bottom-funnel conversion capture.',
+        details: ['Cross-platform audience routing', 'Dynamic retargeting suppression', 'Omnichannel budget rebalancing']
+      },
+      {
+        title: 'First-Party Tracking & Conversion API Setup',
+        description: 'Resilient data infrastructure impervious to iOS tracking restrictions and third-party cookie deprecation.',
+        details: ['Meta & Google Server-Side CAPI', 'Custom offline conversion sync', 'UTM taxonomy standardization']
+      },
+      {
+        title: 'Creative Strategy & Rapid Iteration Lab',
+        description: 'High-converting ad creatives built specifically for commercial persuasion and thumb-stopping engagement.',
+        details: ['Direct-response copy scripts', 'Visual proof and comparison frameworks', 'Weekly creative performance audits']
+      },
+      {
+        title: 'Conversion Rate Optimization (CRO) & Landing Pages',
+        description: 'Dedicated post-click landing pages engineered to maximize form submissions and reduce bounce rates.',
+        details: ['A/B split testing methodology', 'Heatmap and drop-off analysis', 'Friction-free mobile form flows']
+      }
+    ],
+    benefitsAndOutcomes: [
+      { metric: '3.8x - 6.2x', description: 'Validated blended ROAS across multi-channel paid acquisition accounts' },
+      { metric: '-32%', description: 'Average reduction in Customer Acquisition Cost (CAC) within 90 days' },
+      { metric: '100%', description: 'Client ownership of ad accounts, pixel data, tracking scripts, and creative files' },
+      { metric: 'Real-Time', description: 'Live transparent Looker Studio dashboard tracking blended CAC, MER, and pipeline value' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Unit Economics & Funnel Audit', description: 'We map your customer lifetime value, margins, past campaign data, and target CAC thresholds.' },
+      { step: '02', title: 'Tracking & Infrastructure Hardening', description: 'We install server-side conversion APIs, first-party tracking pixels, and CRM lead capture handoffs.' },
+      { step: '03', title: 'Creative Testing & Campaign Launch', description: 'We launch modular campaigns testing distinct value propositions, ad formats, and audience segments.' },
+      { step: '04', title: 'Aggressive Scaling & CRO', description: 'We allocate budget to validated winning creative angles while continuously testing landing pages to lower CAC.' }
+    ],
+    suitableFor: [
+      'B2B SaaS and technology companies targeting verified qualified leads',
+      'Healthcare clinics, educational institutes, and premium local service networks',
+      'Direct-to-Consumer (D2C) brands seeking profitable scale above break-even',
+      'Real estate developers and financial advisories requiring high-ticket buyer inquiries'
+    ],
+    relatedServices: ['google-ads', 'meta-ads', 'ppc-advertising', 'website-design-development'],
+    caseStudy: {
+      title: 'Full-Funnel Multi-Channel Performance Scale',
+      industry: 'FinTech & B2B Advisory',
+      timeline: '6 Months',
+      challenge: 'The client was spending ₹4,50,000/month across disjointed Google and Meta campaigns with escalating CAC and 40% unverified lead drop-offs.',
+      strategy: 'Implemented server-side attribution, rebuilt custom high-speed landing pages, and restructured campaigns into structured prospecting, objection handling, and hyper-targeted retargeting funnels.',
+      outcome: 'Decreased Cost-Per-Qualified-Lead by 41%, scaled monthly qualified consultation bookings from 48 to 172, and achieved a 4.9x verified marketing return on ad spend.'
+    },
+    faqs: [
+      {
+        question: 'What is the difference between PPC Advertising and Performance Marketing?',
+        answer: 'While PPC (Pay-Per-Click) refers to the bidding model used on platforms like Google Search, Performance Marketing is a broader holistic discipline. It unifies paid search, paid social, conversion rate optimization (CRO), creative psychology, server-side attribution, and unit economics to ensure every rupee spent generates profitable business growth.'
+      },
+      {
+        question: 'What monthly ad budget is required for Performance Marketing?',
+        answer: 'We typically recommend a minimum advertising budget of ₹60,000 to ₹1,50,000 per month. This provides sufficient statistical significance for algorithm learning, creative A/B testing, and rapid optimization across channels.'
+      },
+      {
+        question: 'Who owns the ad accounts and performance data?',
+        answer: 'You retain 100% ownership of your Meta Business Manager, Google Ads accounts, tracking pixels, and ad creative files. We operate under partner access permissions. If you ever pause work with us, your historical data, pixel learning, and campaigns remain completely yours.'
+      },
+      {
+        question: 'How do you prevent lead quality issues and junk submissions?',
+        answer: 'We filter out spam through strict form validation, work-email verification, custom qualifying questions, and negative audience exclusions. We optimize algorithms based on qualified opportunities rather than raw superficial contact form fills.'
       }
     ]
   }

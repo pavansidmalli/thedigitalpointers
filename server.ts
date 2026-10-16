@@ -314,6 +314,8 @@ app.get('/sitemap.xml', (_req: Request, res: Response) => {
     '/services/ppc-advertising/',
     '/services/google-ads/',
     '/services/meta-ads/',
+    '/services/performance-marketing/',
+    '/case-studies/',
     '/faqs/',
     '/blog/',
     '/blog/how-local-seo-helps-businesses-attract-nearby-customers/',

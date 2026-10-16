@@ -6,6 +6,7 @@ import { BlogCMSModal } from './components/BlogCMSModal';
 import { LeadsDashboardModal } from './components/LeadsDashboardModal';
 import { LegalModal } from './components/LegalModal';
 import { StrategyGuideModal } from './components/StrategyGuideModal';
+import { FloatingContactButtons } from './components/FloatingContactButtons';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
@@ -14,10 +15,12 @@ import { FAQsPage } from './pages/FAQsPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { ContactPage } from './pages/ContactPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { AdminPage } from './pages/AdminPage';
 import { initialBlogPosts } from './data/blogData';
 import { servicesData } from './data/servicesData';
+import { seoRoutes } from './data/seoConfig';
 import { ThemeProvider } from './context/ThemeContext';
 import { BlogPost } from './types';
 
@@ -81,6 +84,9 @@ function AppContent() {
   let pageContent: React.ReactNode = null;
   let customTitle: string | undefined = undefined;
   let customDescription: string | undefined = undefined;
+  let customMainKeyword: string | undefined = undefined;
+  let customKeywords: string[] | undefined = undefined;
+  let serviceSEOData: any = undefined;
   let articleSEOData: any = undefined;
 
   if (cleanPath === '' || cleanPath === '/') {
@@ -93,8 +99,23 @@ function AppContent() {
     const slug = cleanPath.replace('/services/', '').replace(/\/$/, '');
     const service = servicesData.find((s) => s.slug === slug);
     if (service) {
-      customTitle = `${service.title} Services — Digital Pointer`;
-      customDescription = service.shortDescription;
+      const routeKey = `/services/${slug}/`;
+      const routeConfig = seoRoutes[routeKey];
+      customTitle = service.metaTitle || routeConfig?.title || `${service.title} Services Hyderabad | The Digital Pointers`;
+      customDescription = service.metaDescription || routeConfig?.description || service.shortDescription;
+      customMainKeyword = service.mainKeyword || routeConfig?.mainKeyword || `${service.title.toLowerCase()} services hyderabad`;
+      customKeywords = service.keywords || routeConfig?.keywords;
+      serviceSEOData = {
+        title: service.title,
+        description: customDescription,
+        category: service.category,
+        slug: service.slug,
+        image: service.image,
+        imageAlt: service.imageAlt,
+        faqs: service.faqs,
+        deliverables: service.deliverables,
+        benefitsAndOutcomes: service.benefitsAndOutcomes
+      };
       pageContent = (
         <ServiceDetailPage
           slug={slug}
@@ -112,15 +133,14 @@ function AppContent() {
       <BlogPage
         articles={blogArticles}
         onNavigate={navigateTo}
-        onOpenCMS={() => setIsBlogCMSOpen(true)}
       />
     );
   } else if (cleanPath.startsWith('/blog/')) {
     const slug = cleanPath.replace('/blog/', '').replace(/\/$/, '');
     const post = blogArticles.find((p) => p.slug === slug);
     if (post) {
-      customTitle = `${post.title} — Digital Pointer`;
-      customDescription = post.excerpt;
+      customTitle = `${post.title} — The Digital Pointers`;
+      customMainKeyword = post.category.toLowerCase();
       articleSEOData = {
         headline: post.title,
         description: post.excerpt,
@@ -138,6 +158,8 @@ function AppContent() {
     } else {
       pageContent = <NotFoundPage onNavigate={navigateTo} />;
     }
+  } else if (cleanPath === '/case-studies' || cleanPath === '/portfolio') {
+    pageContent = <CaseStudiesPage onNavigate={navigateTo} />;
   } else if (cleanPath === '/contact') {
     pageContent = (
       <ContactPage
@@ -145,13 +167,24 @@ function AppContent() {
         onOpenPrivacy={() => setLegalModalState({ isOpen: true, type: 'privacy' })}
       />
     );
-  } else if (cleanPath === '/admin') {
-    customTitle = 'Owner Admin Portal — Digital Pointer';
+  } else if (cleanPath.toLowerCase() === '/admin') {
+    customTitle = 'Owner Admin Portal — The Digital Pointers';
     customDescription = 'Private agency owner console for inbound client leads & marketing funnel.';
-    pageContent = <AdminPage onNavigate={navigateTo} />;
-  } else if (cleanPath === '/leads') {
+    customMainKeyword = 'agency owner admin';
+    pageContent = (
+      <AdminPage
+        onNavigate={navigateTo}
+        onOpenCMS={() => setIsBlogCMSOpen(true)}
+      />
+    );
+  } else if (cleanPath.toLowerCase() === '/leads') {
     // Redirect /leads to /admin
-    pageContent = <AdminPage onNavigate={navigateTo} />;
+    pageContent = (
+      <AdminPage
+        onNavigate={navigateTo}
+        onOpenCMS={() => setIsBlogCMSOpen(true)}
+      />
+    );
   } else {
     pageContent = <NotFoundPage onNavigate={navigateTo} />;
   }
@@ -163,6 +196,9 @@ function AppContent() {
         pathname={currentPath}
         customTitle={customTitle}
         customDescription={customDescription}
+        customMainKeyword={customMainKeyword}
+        customKeywords={customKeywords}
+        serviceData={serviceSEOData}
         articleData={articleSEOData}
       />
 
@@ -179,13 +215,14 @@ function AppContent() {
         {pageContent}
       </main>
 
+      {/* Fixed WhatsApp & Call Buttons in Bottom Corners */}
+      <FloatingContactButtons />
+
       {/* Comprehensive Footer with Theme Toggle */}
       <Footer
         onNavigate={navigateTo}
         onOpenPrivacy={() => setLegalModalState({ isOpen: true, type: 'privacy' })}
         onOpenTerms={() => setLegalModalState({ isOpen: true, type: 'terms' })}
-        onOpenLeadsConsole={() => setIsLeadsConsoleOpen(true)}
-        onOpenBlogCMS={() => setIsBlogCMSOpen(true)}
       />
 
       {/* Strategy Guide Lead Capture Modal */}

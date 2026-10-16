@@ -253,7 +253,7 @@ export const LeadsDashboardModal: React.FC<LeadsDashboardModalProps> = ({ isOpen
     link.setAttribute('href', encodedUri);
     link.setAttribute(
       'download',
-      `digital_pointer_leads_${new Date().toISOString().split('T')[0]}.csv`
+      `the_digital_pointers_leads_${new Date().toISOString().split('T')[0]}.csv`
     );
     document.body.appendChild(link);
     link.click();

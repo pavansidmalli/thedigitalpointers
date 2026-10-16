@@ -16,7 +16,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenPriv
       {/* Hero Header */}
       <section className="space-y-4 max-w-3xl">
         <div className="text-xs font-mono font-semibold tracking-wider text-[#F06432] uppercase">
-          Connect With Digital Pointer
+          Connect With The Digital Pointers
         </div>
         <h1 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#111111] dark:text-white tracking-tight leading-tight">
           Let’s Discuss Your Business Direction.
@@ -58,10 +58,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenPriv
                 <div>
                   <div className="text-xs text-[#707070] dark:text-[#A1A1AA] font-mono">Direct Strategy Line</div>
                   <a
-                    href="tel:+919845012345"
+                    href="tel:+919705866749"
                     className="font-semibold text-sm hover:text-[#F06432] transition-colors"
                   >
-                    +91 98450 12345 (India / Global)
+                    +91 9705866749 (India / Global)
                   </a>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenPriv
                 <div>
                   <div className="text-xs text-[#707070] dark:text-[#A1A1AA] font-mono">Headquarters</div>
                   <div className="font-medium text-sm text-[#111111] dark:text-white">
-                    Bengaluru, Karnataka, India
+                    Hyderabad, Telangana, India
                   </div>
                   <div className="text-xs text-[#707070] dark:text-[#A1A1AA]">
                     Serving clients across India, North America, UK, UAE & Australia
@@ -97,7 +97,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenPriv
             {/* Direct WhatsApp Action */}
             <div className="pt-4 border-t border-[#E8E8E8] dark:border-[#26262B]">
               <a
-                href="https://wa.me/919845012345?text=Hello%20Digital%20Pointer%2C%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20consultation."
+                href="https://wa.me/919705866749?text=Hello%20The%20Digital%20Pointers%2C%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 px-4 rounded-xl text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2"

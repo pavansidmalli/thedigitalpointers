@@ -125,7 +125,7 @@ export const FAQsPage: React.FC<FAQsPageProps> = ({ onNavigate }) => {
           </button>
 
           <a
-            href="https://wa.me/919845012345?text=Hello%20Digital%20Pointer%2C%20I%20have%20a%20question%20about%20your%20services."
+            href="https://wa.me/919705866749?text=Hello%20The%20Digital%20Pointers%2C%20I%20have%20a%20question%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg text-sm font-semibold text-[#111111] dark:text-white bg-white dark:bg-[#1A1A1E] border border-[#E8E8E8] dark:border-[#2C2C32] hover:bg-[#E8E8E8] dark:hover:bg-[#25252B] transition-colors flex items-center gap-2"

@@ -139,7 +139,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, allPosts, onNa
               Explore Relevant Capabilities
             </h4>
             <p className="text-xs text-[#707070] dark:text-[#A1A1AA]">
-              Discover how Digital Pointer executes these principles for clients.
+              Discover how The Digital Pointers executes these principles for clients.
             </p>
           </div>
           <button
@@ -155,13 +155,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, allPosts, onNa
       {/* Author Bio Box */}
       <div className="p-6 rounded-2xl bg-white dark:bg-[#141417] border border-[#E8E8E8] dark:border-[#26262B] flex items-start gap-4">
         <div className="w-12 h-12 rounded-xl bg-[#111111] dark:bg-[#1E1E24] text-white flex items-center justify-center font-bold text-sm shrink-0 border border-transparent dark:border-[#2E2E36]">
-          DP
+          TDP
         </div>
         <div className="space-y-1">
           <div className="font-heading font-bold text-base text-[#111111] dark:text-white">{post.author.name}</div>
           <div className="text-xs text-[#F06432] font-mono">{post.author.role}</div>
           <p className="text-xs text-[#707070] dark:text-[#A1A1AA] pt-1 leading-relaxed">
-            Published by Digital Pointer's senior practice directors specializing in data-driven organic search, conversion architecture, and measurable paid campaigns.
+            Published by The Digital Pointers' senior practice directors specializing in data-driven organic search, conversion architecture, and measurable paid campaigns.
           </p>
         </div>
       </div>

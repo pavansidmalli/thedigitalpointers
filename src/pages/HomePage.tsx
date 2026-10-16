@@ -3,6 +3,7 @@ import { ArrowRight, Compass, CheckCircle2, Shield, Eye, BarChart2, Zap, Buildin
 import { MarketingDashboardVisual } from '../components/MarketingDashboardVisual';
 import { ServiceCard } from '../components/ServiceCard';
 import { FAQAccordion } from '../components/FAQAccordion';
+import { CaseStudiesSection } from '../components/CaseStudiesSection';
 import { servicesData } from '../data/servicesData';
 import { caseStudiesData } from '../data/caseStudiesData';
 import { faqsData } from '../data/faqsData';
@@ -81,10 +82,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
   const sampleTestimonials = [
     {
-      quote: 'Digital Pointer restructured our entire digital presence. Our previous agency gave us vanity traffic reports, but Digital Pointer focused strictly on qualified inbound consultation requests.',
+      quote: 'The Digital Pointers restructured our entire digital presence. Our previous agency gave us vanity traffic reports, but The Digital Pointers focused strictly on qualified inbound consultation requests.',
       author: 'Managing Partner',
       role: 'Corporate Legal & Financial Advisory',
-      location: 'Bengaluru, India'
+      location: 'Hyderabad, India'
     },
     {
       quote: 'Their attention to technical SEO and Google Maps accuracy made an immediate impact on our multi-branch clinics. Phone calls from nearby patients increased within the first 60 days.',
@@ -123,7 +124,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             {/* Supporting Text */}
             <p className="text-base sm:text-lg text-[#707070] dark:text-[#A1A1AA] leading-relaxed max-w-xl">
-              Digital Pointer helps businesses grow online through strategic SEO, high-performing websites, social media marketing, and data-driven advertising.
+              The Digital Pointers helps businesses grow online through strategic SEO, high-performing websites, social media marketing, and data-driven advertising.
             </p>
 
             {/* CTAs */}
@@ -182,8 +183,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </p>
         </div>
 
-        {/* 8 Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 9 Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={service.slug}
@@ -270,63 +271,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* SECTION 5: FEATURED WORK / PORTFOLIO */}
+      {/* SECTION 5: FEATURED WORK / PORTFOLIO WITH BEFORE & AFTER RESULTS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div className="max-w-2xl">
-            <div className="text-xs font-mono font-semibold tracking-wider text-[#F06432] uppercase mb-2">
-              Representative Case Studies
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#111111] dark:text-white tracking-tight">
-              Ideas That Move Businesses Forward.
-            </h2>
-            <p className="text-base text-[#707070] dark:text-[#A1A1AA] mt-3 leading-relaxed">
-              Carefully engineered campaigns and digital architectures delivering measurable commercial outcomes.
-            </p>
-          </div>
-          <span className="text-xs font-mono text-[#707070] dark:text-[#A1A1AA] self-start md:self-auto">
-            (Sample representative projects)
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {caseStudiesData.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white dark:bg-[#141417] rounded-2xl border border-[#E8E8E8] dark:border-[#26262B] p-7 space-y-6 hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)] transition-all"
-            >
-              <div>
-                <div className="flex items-center gap-2 text-xs text-[#707070] dark:text-[#A1A1AA] font-mono mb-2">
-                  <span>{project.industry}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{project.clientType}</span>
-                </div>
-                <h3 className="font-heading text-xl font-bold text-[#111111] dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-[#707070] dark:text-[#A1A1AA] mt-3 leading-relaxed">
-                  {project.summary}
-                </p>
-              </div>
-
-              {/* Verified Metrics Strip */}
-              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-[#E8E8E8] dark:border-[#26262B]">
-                {project.results.map((r, i) => (
-                  <div key={i} className="p-2.5 bg-[#F7F7F5] dark:bg-[#19191D] rounded-lg border border-[#E8E8E8] dark:border-[#26262B]">
-                    <div className="text-[11px] text-[#707070] dark:text-[#A1A1AA] font-mono">{r.label}</div>
-                    <div className="text-sm font-bold font-mono text-[#111111] dark:text-white mt-0.5">{r.value}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2 text-xs text-[#707070] dark:text-[#A1A1AA] font-mono">
-                {project.services.map((srv, idx) => (
-                  <span key={idx}>#{srv.replace(/\s+/g, '')}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <CaseStudiesSection onNavigate={onNavigate} />
       </section>
 
       {/* SECTION 6: INDUSTRIES WE SERVE */}

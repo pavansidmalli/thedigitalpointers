@@ -14,7 +14,7 @@ export const BlogCMSModal: React.FC<BlogCMSModalProps> = ({ isOpen, onClose, onA
   const [category, setCategory] = useState('Search Strategy');
   const [excerpt, setExcerpt] = useState('');
   const [readTime, setReadTime] = useState('5 min read');
-  const [authorName, setAuthorName] = useState('Digital Pointer Team');
+  const [authorName, setAuthorName] = useState('The Digital Pointers Team');
   const [authorRole, setAuthorRole] = useState('Senior Strategy Consultant');
   const [sectionHeading, setSectionHeading] = useState('');
   const [sectionBody, setSectionBody] = useState('');
@@ -51,9 +51,15 @@ export const BlogCMSModal: React.FC<BlogCMSModalProps> = ({ isOpen, onClose, onA
     setIsSubmitting(true);
 
     try {
+      const savedToken = localStorage.getItem('dp_owner_admin_token');
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (savedToken) {
+        headers['Authorization'] = `Bearer ${savedToken}`;
+      }
+
       const response = await fetch('/api/blog', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
           title,
           slug,
@@ -65,7 +71,7 @@ export const BlogCMSModal: React.FC<BlogCMSModalProps> = ({ isOpen, onClose, onA
           introduction: excerpt,
           sectionHeading: sectionHeading || 'Strategic Execution Framework',
           sectionBody: [sectionBody || excerpt],
-          conclusion: conclusion || 'Get in touch with Digital Pointer to implement this roadmap.',
+          conclusion: conclusion || 'Get in touch with The Digital Pointers to implement this roadmap.',
           tags
         })
       });
@@ -97,7 +103,7 @@ export const BlogCMSModal: React.FC<BlogCMSModalProps> = ({ isOpen, onClose, onA
             <FileText className="w-5 h-5 text-[#F06432]" />
             <div>
               <h3 className="font-heading font-bold text-base text-[#111111] dark:text-white">
-                Digital Pointer Custom Blog CMS
+                The Digital Pointers Custom Blog CMS
               </h3>
               <p className="text-xs text-[#707070] dark:text-[#A1A1AA]">
                 Publish a new editorial article directly to the live blog archive

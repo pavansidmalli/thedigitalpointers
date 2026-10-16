@@ -104,13 +104,13 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             <button
               onClick={() => handleNavClick('/')}
               className="flex items-center gap-2.5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F06432] rounded-md min-h-[44px]"
-              aria-label="Digital Pointer Homepage"
+              aria-label="The Digital Pointers Homepage"
             >
               <div className="w-8 h-8 rounded-lg bg-[#111111] dark:bg-[#1A1A1E] dark:border dark:border-[#2E2E34] flex items-center justify-center text-white transition-transform duration-200 group-hover:scale-105">
                 <MousePointer2 className="w-4 h-4 text-[#F06432] fill-[#F06432]" />
               </div>
               <span className="font-heading font-extrabold text-xl tracking-tight text-[#111111] dark:text-white">
-                Digital<span className="text-[#F06432]">Pointer</span>
+                The Digital <span className="text-[#F06432]">Pointers</span>
               </span>
             </button>
           </div>
@@ -217,6 +217,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </div>
 
             <button
+              onClick={() => handleNavClick('/case-studies/')}
+              className={`text-sm font-medium transition-colors whitespace-nowrap focus:outline-none focus-visible:ring-1 focus-visible:ring-[#F06432] rounded px-1.5 py-1 min-h-[36px] ${
+                isCurrentActive('/case-studies/') || isCurrentActive('/portfolio/')
+                  ? 'text-[#F06432] font-semibold'
+                  : 'text-[#111111] dark:text-[#E4E4E7] hover:text-[#F06432] dark:hover:text-[#F06432]'
+              }`}
+            >
+              Case Studies
+            </button>
+
+            <button
               onClick={() => handleNavClick('/faqs/')}
               className={`text-sm font-medium transition-colors whitespace-nowrap focus:outline-none focus-visible:ring-1 focus-visible:ring-[#F06432] rounded px-1.5 py-1 min-h-[36px] ${
                 isCurrentActive('/faqs/')
@@ -250,24 +261,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </button>
           </nav>
 
-          {/* Zone 3: Theme Toggle + CTA Button + Mobile Hamburger */}
+          {/* Zone 3: CTA Button + Mobile Hamburger */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Dark / Light Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-              className="p-2.5 rounded-lg text-[#111111] dark:text-neutral-200 bg-[#F7F7F5] dark:bg-[#1A1A1E] border border-[#E8E8E8] dark:border-[#2C2C32] hover:bg-[#E8E8E8] dark:hover:bg-[#25252B] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F06432] min-w-[44px] min-h-[44px] flex items-center justify-center"
-              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-4 h-4 text-amber-400" />
-              ) : (
-                <Moon className="w-4 h-4 text-[#707070]" />
-              )}
-            </button>
-
-
-
             <button
               onClick={() => handleNavClick('/contact/')}
               className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-[#F06432] hover:bg-[#d95526] transition-all duration-150 shadow-sm hover:shadow active:scale-[0.98] whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F06432] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-[#0C0C0E] min-h-[44px]"
@@ -372,6 +367,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
               </div>
 
               <button
+                onClick={() => handleNavClick('/case-studies/')}
+                className={`flex items-center justify-between w-full text-left py-3 px-2 text-base font-semibold border-b border-[#E8E8E8]/50 dark:border-[#222226] min-h-[44px] ${
+                  isCurrentActive('/case-studies/') || isCurrentActive('/portfolio/') ? 'text-[#F06432]' : 'text-[#111111] dark:text-white'
+                }`}
+              >
+                <span>Case Studies</span>
+                <ArrowRight className="w-4 h-4 text-[#707070] dark:text-[#A1A1AA]" />
+              </button>
+
+              <button
                 onClick={() => handleNavClick('/faqs/')}
                 className={`flex items-center justify-between w-full text-left py-3 px-2 text-base font-semibold border-b border-[#E8E8E8]/50 dark:border-[#222226] min-h-[44px] ${
                   isCurrentActive('/faqs/') ? 'text-[#F06432]' : 'text-[#111111] dark:text-white'
@@ -438,14 +443,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
               <div className="grid grid-cols-2 gap-2 pt-1">
                 <a
-                  href="tel:+919845012345"
+                  href="tel:+919705866749"
                   className="py-2.5 px-3 rounded-lg text-center text-xs font-semibold text-[#111111] dark:text-white bg-[#F7F7F5] dark:bg-[#18181C] border border-[#E8E8E8] dark:border-[#26262B] flex items-center justify-center gap-1.5 min-h-[44px]"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#F06432]" />
                   <span>Call Us</span>
                 </a>
                 <a
-                  href="https://wa.me/919845012345?text=Hello%20Digital%20Pointer"
+                  href="https://wa.me/919705866749?text=Hello%20The%20Digital%20Pointers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-2.5 px-3 rounded-lg text-center text-xs font-semibold text-white bg-emerald-600 flex items-center justify-center gap-1.5 min-h-[44px]"

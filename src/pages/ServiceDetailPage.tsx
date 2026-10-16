@@ -78,9 +78,91 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             onClick={() => onNavigate('/services/')}
             className="px-6 py-3.5 rounded-lg text-sm font-semibold text-[#111111] dark:text-white bg-[#F7F7F5] dark:bg-[#1A1A1E] hover:bg-[#E8E8E8] dark:hover:bg-[#25252B] transition-colors border border-[#E8E8E8] dark:border-[#2C2C32]"
           >
-            <span>Browse All 8 Services</span>
+            <span>Browse All 9 Services</span>
           </button>
         </div>
+      </section>
+
+      {/* Visual Service Showcase Banner */}
+      {service.image && (
+        <section className="relative rounded-2xl overflow-hidden border border-[#E8E8E8] dark:border-[#28282E] shadow-sm">
+          <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-[#111111]">
+            <img
+              src={service.image}
+              alt={service.imageAlt || service.title}
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover object-center brightness-95 hover:scale-102 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div className="space-y-1.5 text-white">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-semibold bg-[#F06432] text-white">
+                    {service.category} Discipline
+                  </span>
+                  <span className="text-xs font-mono text-neutral-300">Hyderabad, India & Global Delivery</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold font-heading">{service.title}</h3>
+                <p className="text-xs sm:text-sm text-neutral-300 max-w-xl">{service.tagline}</p>
+              </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <div className="px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-mono">
+                  <span className="text-[#F06432] font-bold">100%</span> Client-Owned Assets
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Search & AI Knowledge Overview Card */}
+      <section className="p-6 sm:p-7 rounded-2xl bg-[#F7F7F5] dark:bg-[#141417] border border-[#E8E8E8] dark:border-[#26262B] space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#E8E8E8] dark:border-[#26262B]">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-mono font-semibold text-[#707070] dark:text-[#A1A1AA] uppercase tracking-wider">
+              Search Index & AI Platform Overview
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-xs font-mono text-[#707070] dark:text-[#A1A1AA]">
+            <span>Primary Focus:</span>
+            <span className="px-2.5 py-1 rounded bg-white dark:bg-[#1E1E24] text-[#F06432] font-semibold border border-[#E8E8E8] dark:border-[#2E2E36]">
+              {service.mainKeyword || `${service.title.toLowerCase()} hyderabad`}
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+          <div className="space-y-1">
+            <div className="font-mono text-[#707070] dark:text-[#A1A1AA]">Service Domain</div>
+            <div className="font-semibold text-sm text-[#111111] dark:text-white">{service.title}</div>
+            <div className="text-[#707070] dark:text-[#A1A1AA]">{service.category} Discipline · Comprehensive Roadmap</div>
+          </div>
+          <div className="space-y-1">
+            <div className="font-mono text-[#707070] dark:text-[#A1A1AA]">Service Territory</div>
+            <div className="font-semibold text-sm text-[#111111] dark:text-white">Hyderabad, Telangana · Worldwide</div>
+            <div className="text-[#707070] dark:text-[#A1A1AA]">Local in-person strategy & international remote delivery</div>
+          </div>
+          <div className="space-y-1">
+            <div className="font-mono text-[#707070] dark:text-[#A1A1AA]">Commercial Guarantee</div>
+            <div className="font-semibold text-sm text-[#111111] dark:text-white">100% Client-Owned Intellectual Property</div>
+            <div className="text-[#707070] dark:text-[#A1A1AA]">Zero hostage accounts, weekly performance reporting</div>
+          </div>
+        </div>
+
+        {service.keywords && service.keywords.length > 0 && (
+          <div className="pt-3 border-t border-[#E8E8E8] dark:border-[#26262B] flex flex-wrap items-center gap-1.5">
+            <span className="text-[11px] font-mono text-[#707070] dark:text-[#A1A1AA] mr-1">Semantic Keywords:</span>
+            {service.keywords.map((kw, idx) => (
+              <span
+                key={idx}
+                className="text-[11px] font-mono px-2 py-0.5 rounded bg-white dark:bg-[#1B1B20] text-[#707070] dark:text-[#A1A1AA] border border-[#E8E8E8] dark:border-[#2A2A32]"
+              >
+                {kw}
+              </span>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* 2. Business Problems We Solve */}

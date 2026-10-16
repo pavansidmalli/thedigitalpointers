@@ -40,7 +40,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, onSelect, featured }) 
           </div>
 
           <div className="flex items-center justify-between text-[11px] font-mono text-[#707070] dark:text-[#A1A1AA] pt-2 border-t border-[#E8E8E8] dark:border-[#28282E]">
-            <span>Digital Pointer Editorial</span>
+            <span>The Digital Pointers Editorial</span>
             <span>{post.readTime}</span>
           </div>
         </div>

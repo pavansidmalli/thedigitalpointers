@@ -22,7 +22,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
               <FileText className="w-5 h-5 text-[#F06432]" />
             )}
             <h3 className="font-heading font-bold text-base text-[#111111] dark:text-white">
-              {type === 'privacy' ? 'Digital Pointer Privacy Policy' : 'Digital Pointer Terms of Service'}
+              {type === 'privacy' ? 'The Digital Pointers Privacy Policy' : 'The Digital Pointers Terms of Service'}
             </h3>
           </div>
           <button
@@ -39,7 +39,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
             <>
               <p className="font-semibold text-[#111111] dark:text-white">Last updated: October 2026</p>
               <p>
-                At Digital Pointer, we respect your privacy. This policy outlines how we handle information submitted through our website and enquiry forms.
+                At The Digital Pointers, we respect your privacy. This policy outlines how we handle information submitted through our website and enquiry forms.
               </p>
               <h4 className="font-heading font-bold text-[#111111] dark:text-white text-base pt-2">1. Information We Collect</h4>
               <p>
@@ -62,15 +62,15 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, type })
             <>
               <p className="font-semibold text-[#111111] dark:text-white">Last updated: October 2026</p>
               <p>
-                These terms govern the use of the Digital Pointer website and our consultative service proposals.
+                These terms govern the use of the The Digital Pointers website and our consultative service proposals.
               </p>
               <h4 className="font-heading font-bold text-[#111111] dark:text-white text-base pt-2">1. Scope of Engagement</h4>
               <p>
-                Digital Pointer provides bespoke digital marketing services, including search engine optimization, website engineering, Google Business Profile management, and paid advertising. Specific deliverables and timelines are defined in written client scope documents.
+                The Digital Pointers provides bespoke digital marketing services, including search engine optimization, website engineering, Google Business Profile management, and paid advertising. Specific deliverables and timelines are defined in written client scope documents.
               </p>
               <h4 className="font-heading font-bold text-[#111111] dark:text-white text-base pt-2">2. Search Engine & Platform Realities</h4>
               <p>
-                In compliance with Google Webmaster and ad network standards, Digital Pointer does not make guarantees of specific numeric rankings or ad positions. Rankings and campaign outcomes depend on algorithmic conditions, market competition, and search engine platform policies.
+                In compliance with Google Webmaster and ad network standards, The Digital Pointers does not make guarantees of specific numeric rankings or ad positions. Rankings and campaign outcomes depend on algorithmic conditions, market competition, and search engine platform policies.
               </p>
               <h4 className="font-heading font-bold text-[#111111] dark:text-white text-base pt-2">3. Intellectual Property</h4>
               <p>

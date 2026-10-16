@@ -124,7 +124,7 @@ Generated Date: ${new Date().toLocaleDateString('en-US', { month: 'long', day: '
 EXECUTIVE SUMMARY: SHIFTING FROM VANITY ATTENTION TO COMMERCIAL ACQUISITION
 --------------------------------------------------------------------------------
 Modern digital marketing is broken by vanity metrics: impressions, clicks, and
-superficial rankings that produce zero pipeline. Digital Pointer builds marketing
+superficial rankings that produce zero pipeline. The Digital Pointers builds marketing
 systems anchored around customer economics, verified inquiries, and sustainable
 organic visibility.
 
@@ -173,17 +173,17 @@ NEED BESPOKE IMPLEMENTATION?
 Contact our senior strategists directly for a customized audit:
 Web: https://digitalpointer.agency/contact/
 Email: hello@digitalpointer.agency
-Phone: +91 98450 12345
-Bengaluru, India · Serving Clients Worldwide
+Phone: +91 9705866749
+Hyderabad, India · Serving Clients Worldwide
 
-© ${new Date().getFullYear()} Digital Pointer. All rights reserved.
+© ${new Date().getFullYear()} The Digital Pointers. All rights reserved.
 ================================================================================`;
 
     const blob = new Blob([guideContent], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `Digital_Pointer_2026_Growth_Playbook_${formData.fullName.replace(/\s+/g, '_') || 'Partner'}.txt`;
+    link.download = `The_Digital_Pointers_2026_Growth_Playbook_${formData.fullName.replace(/\s+/g, '_') || 'Partner'}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -279,7 +279,7 @@ Bengaluru, India · Serving Clients Worldwide
 
               <div className="pt-4 border-t border-[#E8E8E8] dark:border-[#26262B] text-xs text-[#707070] dark:text-[#A1A1AA] flex items-center justify-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <span>Verified lead recorded in Digital Pointer Client Console.</span>
+                <span>Verified lead recorded in The Digital Pointers Client Console.</span>
               </div>
             </div>
           ) : (

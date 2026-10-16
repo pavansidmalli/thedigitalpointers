@@ -34,7 +34,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
     {
       title: 'The Rapid Scale Funnel',
       goal: 'Immediate lead generation with verifiable Cost-Per-Acquisition',
-      mix: ['Google Ads Management', 'Meta Ads Management', 'PPC Advertising'],
+      mix: ['Performance Marketing', 'Google Ads Management', 'Meta Ads Management', 'PPC Advertising'],
       summary: 'Designed for consumer services, training academies, and real estate developers looking to scale weekly lead volume under strict budget caps.'
     }
   ];
@@ -66,14 +66,20 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
 
       {/* Hero */}
       <section className="space-y-6 max-w-4xl">
-        <div className="text-xs font-mono font-semibold tracking-wider text-[#F06432] uppercase">
-          Capabilities Directory
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-mono font-semibold tracking-wider text-[#F06432] uppercase">
+            Capabilities Directory
+          </span>
+          <span className="text-xs font-mono text-[#707070] dark:text-[#A1A1AA]">·</span>
+          <span className="text-xs font-mono text-[#707070] dark:text-[#A1A1AA]">
+            Hyderabad, Telangana · Serving Clients Worldwide
+          </span>
         </div>
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#111111] dark:text-white tracking-tight leading-[1.1] text-balance">
           Strategic Digital Services Engineered for Commercial Impact.
         </h1>
         <p className="text-lg sm:text-xl text-[#707070] dark:text-[#A1A1AA] leading-relaxed max-w-3xl">
-          We provide eight interconnected services designed to solve visibility bottlenecks, lower customer acquisition costs, and build durable digital assets for your brand.
+          We provide nine interconnected digital marketing disciplines—engineered to eliminate organic search bottlenecks, drive high-intent Google Ads and Meta conversions, scale performance marketing ROI, and build high-converting website assets.
         </p>
       </section>
 
@@ -97,7 +103,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service, index) => (
             <ServiceCard
               key={service.slug}

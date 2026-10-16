@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Code, Search, MapPin, Store, Share2, MousePointerClick, Target, Layers } from 'lucide-react';
+import { ArrowRight, Code, Search, MapPin, Store, Share2, MousePointerClick, Target, Layers, TrendingUp } from 'lucide-react';
 import { ServiceItem } from '../types';
 
 interface ServiceCardProps {
@@ -117,7 +117,7 @@ const renderServiceVisual = (slug: string) => {
             <div className="p-2 bg-white dark:bg-[#222228] rounded border border-[#E8E8E8] dark:border-[#2E2E36] flex items-center justify-between text-xs">
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="font-semibold text-[#111111] dark:text-white truncate max-w-[120px]">Digital Pointer</span>
+                <span className="font-semibold text-[#111111] dark:text-white truncate max-w-[130px]">The Digital Pointers</span>
               </div>
               <span className="text-[11px] font-mono text-[#F06432] font-semibold">#1 in Map Pack</span>
             </div>
@@ -211,6 +211,40 @@ const renderServiceVisual = (slug: string) => {
         </div>
       );
 
+    case 'performance-marketing':
+      return (
+        <div className="h-44 w-full bg-[#F7F7F5] dark:bg-[#19191D] rounded-xl border border-[#E8E8E8] dark:border-[#28282E] p-4 flex flex-col justify-between overflow-hidden relative group-hover:border-[#F06432]/30 transition-colors">
+          <div className="flex items-center justify-between pb-2 border-b border-[#E8E8E8] dark:border-[#28282E]">
+            <span className="text-[10px] font-mono font-medium text-[#111111] dark:text-white">Blended Unit Economics</span>
+            <TrendingUp className="w-3.5 h-3.5 text-[#F06432]" />
+          </div>
+          <div className="space-y-1.5 py-1">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-[#707070] dark:text-[#A1A1AA] font-mono text-[11px]">Blended CAC</span>
+              <span className="font-mono font-bold text-emerald-600 dark:text-emerald-400">-32% Down</span>
+            </div>
+            <div className="grid grid-cols-3 gap-1 text-center font-mono text-[9px] pt-1">
+              <div className="p-1.5 bg-white dark:bg-[#222228] rounded border border-[#E8E8E8] dark:border-[#2E2E36]">
+                <div className="text-[#707070] dark:text-[#A1A1AA]">Top Funnel</div>
+                <div className="font-bold text-[#111111] dark:text-white mt-0.5">₹1.80 CPC</div>
+              </div>
+              <div className="p-1.5 bg-white dark:bg-[#222228] rounded border border-[#E8E8E8] dark:border-[#2E2E36]">
+                <div className="text-[#707070] dark:text-[#A1A1AA]">CRO Conv</div>
+                <div className="font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">8.4% Rate</div>
+              </div>
+              <div className="p-1.5 bg-white dark:bg-[#222228] rounded border border-[#E8E8E8] dark:border-[#2E2E36]">
+                <div className="text-[#707070] dark:text-[#A1A1AA]">Blended ROAS</div>
+                <div className="font-bold text-[#F06432] mt-0.5">5.2x Net</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between pt-2 border-t border-[#E8E8E8] dark:border-[#28282E] text-[10px] text-[#707070] dark:text-[#A1A1AA]">
+            <span>Multi-Touch Attribution</span>
+            <span className="font-mono text-emerald-600 dark:text-emerald-400 font-semibold">1st-Party Verified</span>
+          </div>
+        </div>
+      );
+
     case 'meta-ads':
     default:
       return (
@@ -241,6 +275,8 @@ const renderServiceVisual = (slug: string) => {
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect, index }) => {
+  const [imageError, setImageError] = React.useState(false);
+
   return (
     <div
       role="link"
@@ -253,12 +289,34 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onSelect, ind
           onSelect(`/services/${service.slug}/`);
         }
       }}
-      className="group relative bg-white dark:bg-[#141417] rounded-2xl border border-[#E8E8E8] dark:border-[#26262B] p-6 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#111111]/30 dark:hover:border-[#F06432]/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F06432] transition-all duration-200 cursor-pointer flex flex-col justify-between"
+      className="group relative bg-white dark:bg-[#141417] rounded-2xl border border-[#E8E8E8] dark:border-[#26262B] p-5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] dark:hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:border-[#F06432]/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F06432] transition-all duration-200 cursor-pointer flex flex-col justify-between"
     >
       <div>
-        {/* Tailored Visual Container */}
-        <div className="mb-6 overflow-hidden rounded-xl">
-          {renderServiceVisual(service.slug)}
+        {/* Tailored Visual Container with Service Imagery */}
+        <div className="mb-5 overflow-hidden rounded-xl border border-[#E8E8E8] dark:border-[#28282E] relative bg-[#F7F7F5] dark:bg-[#19191D] h-44">
+          {service.image && !imageError ? (
+            <div className="relative w-full h-full overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.imageAlt || service.title}
+                referrerPolicy="no-referrer"
+                loading="lazy"
+                onError={() => setImageError(true)}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent pointer-events-none" />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-black/70 text-white backdrop-blur-xs border border-white/15 shadow-xs">
+                  {service.category}
+                </span>
+              </div>
+              <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-white text-[11px] font-mono font-medium drop-shadow-sm">
+                <span className="truncate pr-2">{service.tagline}</span>
+              </div>
+            </div>
+          ) : (
+            renderServiceVisual(service.slug)
+          )}
         </div>
 
         {/* Clean Unboxed Metadata */}

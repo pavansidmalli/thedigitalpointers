@@ -131,7 +131,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialService, onOpen
         </p>
 
         <p className="text-xs sm:text-sm text-[#707070] dark:text-[#A1A1AA] max-w-md mx-auto mt-4 leading-relaxed">
-          Thank you for reaching out to Digital Pointer. Our senior digital marketing strategist will review your requirements, prepare initial observations, and reach out within 24 business hours.
+          Thank you for reaching out to The Digital Pointers. Our senior digital marketing strategist will review your requirements, prepare initial observations, and reach out within 24 business hours.
         </p>
 
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
@@ -143,7 +143,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialService, onOpen
           </button>
 
           <a
-            href="https://wa.me/919845012345?text=Hello%20Digital%20Pointer%2C%20I%20just%20submitted%20enquiry%20reference%20code%20"
+            href="https://wa.me/919705866749?text=Hello%20The%20Digital%20Pointers%2C%20I%20just%20submitted%20enquiry%20reference%20code%20"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors min-h-[44px]"
@@ -242,7 +242,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialService, onOpen
               <input
                 type="tel"
                 id="phoneNumber"
-                placeholder="e.g. 98450 12345"
+                placeholder="e.g. 97058 66749"
                 value={formData.phoneNumber}
                 onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                 className={`flex-1 px-4 py-3 rounded-lg text-base sm:text-sm min-h-[44px] bg-white dark:bg-[#1A1A1E] text-[#111111] dark:text-white border transition-colors focus:outline-none focus:ring-1 focus:ring-[#F06432] ${
@@ -339,7 +339,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialService, onOpen
               className="mt-1 w-4 h-4 rounded text-[#F06432] focus:ring-[#F06432] border-[#E8E8E8] dark:border-[#2C2C32] dark:bg-[#1A1A1E] shrink-0"
             />
             <span className="text-xs text-[#707070] dark:text-[#A1A1AA] leading-normal">
-              I agree to the Digital Pointer{' '}
+              I agree to The Digital Pointers{' '}
               <button
                 type="button"
                 onClick={onOpenPrivacy}
@@ -374,7 +374,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialService, onOpen
           </button>
 
           <a
-            href="https://wa.me/919845012345?text=Hello%20Digital%20Pointer%2C%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20consultation."
+            href="https://wa.me/919705866749?text=Hello%20The%20Digital%20Pointers%2C%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 rounded-lg text-sm font-semibold text-[#111111] dark:text-white bg-[#F7F7F5] dark:bg-[#1A1A1E] hover:bg-[#E8E8E8] dark:hover:bg-[#25252B] transition-colors flex items-center justify-center gap-2 border border-[#E8E8E8] dark:border-[#2C2C32] min-h-[48px]"
